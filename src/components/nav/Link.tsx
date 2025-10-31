@@ -13,6 +13,7 @@ const CustomLink = ({section, children, onClick, activeSection}:Props) => {
   const isActive = activeSection === section
 
   return (
+    <Link 
       to={section}
       smooth={true}
       duration={500}
