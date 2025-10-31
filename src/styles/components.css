@@ -1,3 +1,7 @@
 .flex-between {
     @apply felx items-center justify-between;
 }
+
+.animate {
+    @apply transition duration-500 linear;
+}

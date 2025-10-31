@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import { SectionId } from '@/types/type';
+import type { SectionId } from '@/types/type';
 
 
 type Props = {
@@ -8,10 +8,20 @@ type Props = {
     onClick: (sectionId: SectionId) => void;
     activeSection: SectionId | null;
 }
-const Link = ({section, children, onClick, activeSection}:Props) => {
+const CustomLink = ({section, children, onClick, activeSection}:Props) => {
+
+  const isActive = activeSection === section
+
   return (
-    <div>Link</div>
+      to={section}
+      smooth={true}
+      duration={500}
+      onClick={() => onClick(section)}
+      className={`animate hover:text-primary-300 cursor-pointer capitalize ${isActive ? "text-primary-500" : ""}`}
+    >
+      {children}
+    </Link>
   )
 }
 
-export default Link
+export default CustomLink
