@@ -2,6 +2,7 @@ import { navLinks, type SectionId } from "@/types/type"
 import CustomLink from "./Link"
 import { useState } from "react"
 import logo from "../../assets/Logo.png"
+import { ActionBtn } from "@/utils/actionBtn"
 
 const Nav = () => {
     const [isTopPage, setIsTopPage] = useState<boolean>(true)
@@ -19,7 +20,7 @@ const Nav = () => {
                     <div className="flex-between w-full gap-20">
                         <img src={logo} alt="logo" />
                         <div className="flex-between w-full">
-                        <div className="flex-between gap-8 text-sm">
+                        <div className="flex items-center gap-8 text-sm flex-1 justify-center">
                             {navLinks.map(({ id, label }) => (
                                 <CustomLink 
                                     key={id}
@@ -30,6 +31,10 @@ const Nav = () => {
                                     {label}
                                 </CustomLink>
                             ))}
+                        </div>
+                        <div className="flex-between gap-8">
+                            <button className="animate rounded-md bg-primary-500 px-10 py-2 hover:bg-secondary-500 cursor-pointer hover:text-white">Sign In</button>
+                            <ActionBtn to="contact">Become a Member</ActionBtn>
                         </div>
                     </div>
                     </div>
