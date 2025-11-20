@@ -19,6 +19,8 @@
     --color-secondary-400: #FFCD5B;
     --color-secondary-500: #FFC132;
 
+    --content-evolvetext: url("./assets/EvolveText.png")
+
     --breakpoint-*: initial;
     /* Сброс стандартных брейкпоинтов */
     --breakpoint-xs: 30rem;
